@@ -15,6 +15,12 @@
 
 <button>Add New Product</button>
 
+<%= form_for(Product.new) do |f| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  <%= form.submit %>
+<% end %>
+
 <hr>
 
 <h2>Variants</h2>
