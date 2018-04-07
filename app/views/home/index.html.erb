@@ -13,13 +13,7 @@
   <% end %>
 </ul>
 
-<button>Add New Product</button>
-
-<%= form_for(Product.new) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.submit %>
-<% end %>
+<%= button_to "New", action: "create" %>
 
 <hr>
 
