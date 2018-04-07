@@ -6,7 +6,7 @@ class HomeController < ShopifyApp::AuthenticatedController
     @variants = ShopifyAPI::Variant.find(:all)
   end
 
-  def create
+  def new
   	new_product = ShopifyAPI::Product.new
 	new_product.title = "Burton Custom Freestlye 151"
 	new_product.product_type = "Snowboard"

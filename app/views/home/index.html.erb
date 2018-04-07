@@ -13,7 +13,9 @@
   <% end %>
 </ul>
 
-<%= button_to "New", action: "create" %>
+<form method="post" action="/controller/new" class="button_to">
+  <input value="New" type="submit" />
+</form>
 
 <hr>
 
