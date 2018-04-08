@@ -7,7 +7,17 @@ class HomeController < ShopifyApp::AuthenticatedController
 
 	def hello
 		@hello = "hello"
-		@product = ShopifyAPI::Product.find(649675538498)
+
+
+session = ShopifyAPI::Session.new(shop,token)
+	if session.valid?
+		ShopifyAPI::Base.activate_session(session)
+				 @new_product = ShopifyAPI::Product.new
+				 @new_product.title = "new"
+				 @new_product.save
+end
+
+
 
 	end
 
