@@ -7,9 +7,9 @@ class HomeController < ShopifyApp::AuthenticatedController
 
 	def hello
 		@hello = "hello"
-		new_product = ShopifyAPI::Product.new
-		new_product.title = "Test-Product"
-		new_product.save
+		@product = ShopifyAPI::Product.find(649675538498)
+		@product.title = "test 2"
+		@product.save
 	end
 
 end
