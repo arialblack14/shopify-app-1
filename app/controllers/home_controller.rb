@@ -5,10 +5,9 @@ class HomeController < ShopifyApp::AuthenticatedController
 		@variants = ShopifyAPI::Variant.find(:all)
 	end
 
-	def hello
-		@hello = "hello"
+	def new
+		@new_product = "Create A New Product"
 		@product_new = ShopifyAPI::Product.new
-
 	end
 
 end
