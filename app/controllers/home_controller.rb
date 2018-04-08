@@ -8,8 +8,7 @@ class HomeController < ShopifyApp::AuthenticatedController
 	def hello
 		@hello = "hello"
 		@product = ShopifyAPI::Product.find(649675538498)
-		@product.title = "test 2"
-		@product.save
+
 	end
 
 end
