@@ -7,13 +7,8 @@ class HomeController < ShopifyApp::AuthenticatedController
 
 	def hello
 		@hello = "hello"
-
-				 @new_product = ShopifyAPI::Product.new
-				 @new_product.title = "new"
-				 @new_product.save
-
-
-
+		@product = ShopifyAPI::Product.new(:id => 1, :title => "My new title")
+		@product.save
 	end
 
 end
