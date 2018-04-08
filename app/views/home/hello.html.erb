@@ -1,7 +1,3 @@
 <p><%= @hello %></p>
 
-<ul>
-  <% @products.each do |product| %>
-    <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
-  <% end %>
-</ul>
+<p><%= @new_product %></p>
