@@ -9,8 +9,7 @@ class HomeController < ShopifyApp::AuthenticatedController
 		@hello = "hello"
 
 
-session = ShopifyAPI::Session.new(shop,token)
-	if session.valid?
+session = ShopifyAPI::Session.new("nine15-dev-store.myshopify.com", token)
 		ShopifyAPI::Base.activate_session(session)
 				 @new_product = ShopifyAPI::Product.new
 				 @new_product.title = "new"
