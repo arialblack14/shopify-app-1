@@ -6,8 +6,9 @@ class HomeController < ShopifyApp::AuthenticatedController
 	end
 
 	def new
-		@new_product = "Create A New Product"
 		@product_new = ShopifyAPI::Product.new
+		@product_new.title = "new"
+		@product_new.save
 	end
 
 end

@@ -10,6 +10,7 @@
 <ul>
   <% @products.each do |product| %>
     <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
+    <p></p>
   <% end %>
 </ul>
 
@@ -25,4 +26,4 @@
 
 <hr>
 
-<p><%= link_to "Create A New Product", new_path %></p>
+<p><%= link_to "Create A Product titled 'new'", new_path %></p>
